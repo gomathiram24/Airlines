@@ -139,8 +139,8 @@ display(df1)
 
 # Saving transformed data in to blob
 # Storage account information
-storage_account_name = "jbspoteastusdevsa"
-storage_account_access_key = "G4WlESjCEzYoSsXgMal71jEZEEJFECc0nNBfjHcJlLSAicis6PhMwT7EUAs73jnednAb2aEaGuvdLv4y3yndlA=="
+storage_account_name = 
+storage_account_access_key = 
 
 
 # Configuring the storage account
@@ -155,14 +155,14 @@ spark.conf.set("spark.databricks.io.cache.enabled", "true")
 # Saving transformed data in to blob
 # DONT RUN THIS AGAIN
 # creating transformed data
-df1.write.format("csv").option("path","wasbs://metar-cont@jbspoteastusdevsa.blob.core.windows.net/{}/{}/{}.csv".format(START_DT.strftime("%Y"), START_DT.strftime("%m"), START_DT.strftime("%d_%H_%M_%S"))).saveAsTable("METAR.{}".format(START_DT.strftime("%Y_%m_%d_%H_%M_%S")))
+df1.write.format("csv").option("path","wasbs://metar-cont@.blob.core.windows.net/{}/{}/{}.csv".format(START_DT.strftime("%Y"), START_DT.strftime("%m"), START_DT.strftime("%d_%H_%M_%S"))).saveAsTable("METAR.{}".format(START_DT.strftime("%Y_%m_%d_%H_%M_%S")))
 
 # COMMAND ----------
 
 # Saving transformed data in to blob
 # Storage account information
-storage_account_name = "jbsaeastus2analyticsprd"
-storage_account_access_key = "yH1Q8XJJBJUK9gBNPdnIwCljWK2N45dwk2NR+WJXF0mykt7zlLLf2zbGaK9xdMnerfYQ/OoeFNPVmK5HDxoH7Q=="
+storage_account_name = 
+storage_account_access_key = 
 
 
 # Configuring the storage account
@@ -173,13 +173,6 @@ spark.conf.set("spark.databricks.io.cache.enabled", "true")
 
 
 
-# COMMAND ----------
 
-# Saving transformed data in to blob
-# DONT RUN THIS AGAIN
-# creating transformed data
-df.write.format("csv").option("path","wasbs://tutorial-cont@jbsaeastus2analyticsprd.blob.core.windows.net/{}/{}/{}.csv".format(START_DT.strftime("%Y"), START_DT.strftime("%m"), START_DT.strftime("%d_%H_%M_%S"))).saveAsTable("METAR.{}".format(START_DT.strftime("%Y_%m_%d_%H_%M_%S")))
-
-# COMMAND ----------
 
 
